@@ -21,16 +21,27 @@
 [X] Sticky shift
 [X] Sticky mods
 [X] Fix conditional layers
+[ ] Create a better swapper
+  
 [ ] Modify basic MERGE
 [ ] Modify basic MEDIA
-[X] Create simple Swapper
-[X] Add browser tab to NUM
-[X] Create cancel key - try KC_CANCEL - seems to work.
-[X] base layer toggle - on thumb key because using tapdance to base layer toggle goes to wrong layer.
-[X] Add Delete and RET combos
 [ ] mod morph function keys
 */
 #include QMK_KEYBOARD_H
+
+// Audio support macros
+/*
+#ifdef AUDIO_ENABLE
+#include "audio.h"
+#ifndef PLAY_NOTE
+#define PLAY_NOTE(note, duration) do {         \
+  play_note(note, duration);                 \
+  wait_ms(duration);                         \
+  stop_note(0);                             \
+} while (0)
+#endif
+#endif
+*/
 
 enum layers {
     _BASE = 0,
@@ -90,8 +101,18 @@ enum layers {
 layer_state_t layer_state_set_user(layer_state_t state) {
   state = update_tri_layer_state(state, _NUM, _M_BASE, _M_NUM);
   state = update_tri_layer_state(state, _NAV, _M_BASE, _M_NAV);
+ /* uint8_t current_layer = get_highest_layer(state); // Get the highest active layer
+    switch (current_layer) { // Use the obtained layer
+        case _G_BASE:
+            rgblight_setrgb(255, 0, 0); // Red for gaming layer
+            break;
+        default:
+            rgblight_setrgb(0, 0, 255); // Blue for default layers
+            break;
+    }*/
   return state;
 }
+
 
 // Tap Dance
 //enum {
@@ -133,16 +154,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Base Layer: BASE (Windows)
  *
  * ,-------------------------------------------.      ,------.  ,------.      ,-------------------------------------------.
- * |  Esc   |   1  |   2  |   3  |   4  |   5  |      |LShift|  |RShift|      |   6  |   7  |   8  |   9  |   0  |  Esc   |
+ * |  Esc   |   1  |   2  |   3  |   4  |   5  |      |XXXXXX|  |XXXXXX|      |   6  |   7  |   8  |   9  |   0  |   -    |
  * |--------+------+------+------+------+------|      |------|  |------|      |------+------+------+------+------+--------|
- * |  Tab   |   Q  |   W  |   E  |   R  |   T  |      |LCtrl |  | RCtrl|      |   Y  |   U  |   I  |   O  |   P  |  Bksp  |
+ * |  Tab   |   Q  |   W  |   E  |   R  |   T  |      |XXXXXX|  |XXXXXX|      |   Y  |   U  |   I  |   O  |   P  |   =    |
  * |--------+------+------+------+------+------|      |------|  |------|      |------+------+------+------+------+--------|
- * |Ctrl/Esc|   A  |   S  |   D  |   F  |   G  |      | LAlt |  | RAlt |      |   H  |   J  |   K  |   L  | ;  : |Ctrl/' "|
+ * | LShift |   A  |   S  |   D  |   F  |   G  |      |XXXXXX|  |XXXXXX|      |   H  |   J  |   K  |   L  | ;  : |   '    |
  * |--------+------+------+------+------+------+------+------|  |------|------+------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  | [ {  |CapsLk|  |F-keys|  ] } |   N  |   M  | ,  < | . >  | /  ? | RShift |
+ * | LCtrl  |   Z  |   X  |   C  |   V  |   B  | [ {  |XXXXXX|  |XXXXXX|M_BASE|   N  |   M  | ,  < | . >  | /  ? |Cancel  |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        |MEDIA| LGUI  | LAlt/| Space| NUM  |  | NUM  | Shift| AltGr| RGUI | Menu |
- *                        |      |      | Enter|      |      |  |      |      |      |      |      |
+ *                        | LAlt | LGUI | NUM  |Space |XXXXXX|  |XXXXXX|OSShft| NAV  |XXXXXX|XXXXXX|
+ *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  *
  * ,----------------------------.      ,------.                 ,----------------------------.      ,------.
@@ -382,3 +403,14 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 }
 #endif
 DELETE THIS LINE TO UNCOMMENT (2/2) */
+
+// Play a buzz/tone when Caps Word is enabled
+/*
+void caps_word_set_user(bool active) {
+  #ifdef AUDIO_ENABLE
+  if (active) {
+    PLAY_NOTE(440, 20); // 440Hz for 20ms
+  }
+  #endif
+}
+*/

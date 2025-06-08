@@ -26,8 +26,6 @@ OLED_ENABLE = yes          # Enable OLEDs, `yes` or `no`
 # for the PKLCS1212E4001-R1
 AUDIO_ENABLE = no          # Enable audio support, `yes` or `no`
 
-## Software features
-
 # Supported keycodes
 MOUSEKEY_ENABLE = yes      # Mouse movement using keys
 EXTRAKEY_ENABLE = yes      # Audio and system control
@@ -41,3 +39,5 @@ COMBO_ENABLE = yes
 CAPS_WORD_ENABLE = yes
 
 #TAP_DANCE_ENABLE = yes
+
+RGB_MATRIX_ENABLE = no

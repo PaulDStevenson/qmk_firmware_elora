@@ -19,6 +19,8 @@
 // Myriad boilerplate
 #define MYRIAD_ENABLE
 
+#define TAPPING_TERM 300
+
 // Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed
 #define DEBOUNCE 5
 

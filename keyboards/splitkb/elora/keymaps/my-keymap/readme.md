@@ -39,8 +39,9 @@ Uses GB British
 # TODO
 
 [ ] Review symbol keybindings and print off.
-[ ] Create a better swapper
+[x] Create a better swapper
 [ ] Modify basic MERGE
 [ ] Modify basic MEDIA
 [ ] mod morph function keys
-[ ] 
+[x] Test Mac symbols on NAV and NUM layer.
+[ ]

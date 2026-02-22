@@ -2,7 +2,7 @@
 
 This keymap is designed for the Elora keyboard. Elora includes support for multiple layers, combos, and RGB lighting. 
 
-The keymap is tailored for both Windows and macOS users, with specific layers for gaming.
+The keymap is tailored for both Windows and macOS users, with specific layers for gaming. 
 
 # Hardware Support
 
@@ -24,24 +24,17 @@ keymap draw ~/Documents/git/qmk_firmware_elora/keyboards/splitkb/elora/keymaps/m
 qmk compile -kb <keyboard> -km <keymap>
 
 
-# Layers Overview
-
-~/Documents/git/qmk_firmware_elora/keyboards/splitkb/elora/keymaps/my-keymap/keymap.svg
-
 # MAC
-
 Uses GB British
-@@@@
-
 
 # Windows
+UK English
 
 # TODO
 
-[ ] Review symbol keybindings and print off.
+[x] Review symbol keybindings and print off.
 [x] Create a better swapper
 [ ] Modify basic MERGE
 [ ] Modify basic MEDIA
 [ ] mod morph function keys
 [x] Test Mac symbols on NAV and NUM layer.
-[ ]

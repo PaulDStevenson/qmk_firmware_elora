@@ -221,7 +221,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_NUM] = LAYOUT_myr(
      KC_ESC  , XXXXXXX, XXXXXXX, PTAB, NTAB, W_RELOAD,                                    _______, _______,          KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10, KC_F11,
-     XXXXXXX , KC_HASH, KC_AT  ,SW_WIN_REV , SW_WIN , KC_EQL ,                            _______, _______,          KC_PERC, KC_7   , KC_8  ,  KC_9 , KC_ASTR , XXXXXXX ,
+     XXXXXXX , KC_NUHS, S(KC_QUOT),SW_WIN_REV , SW_WIN , KC_EQL ,                            _______, _______,          KC_PERC, KC_7   , KC_8  ,  KC_9 , KC_ASTR , XXXXXXX ,
      XXXXXXX , OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), OSM(MOD_LSFT), KC_PLUS,       _______, _______,          KC_DOT , KC_0   , KC_1  , KC_2  , KC_3, XXXXXXX,
      XXXXXXX , W_UNDO,    W_CUT, W_COPY , W_PASTE, W_REDO , KC_LCBR,                      _______, _______,          KC_RCBR, XXXXXXX, KC_4   , KC_5  ,  KC_6 , KC_SLSH, XXXXXXX,
                                                       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,

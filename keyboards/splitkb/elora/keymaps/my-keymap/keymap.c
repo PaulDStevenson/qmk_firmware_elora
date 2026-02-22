@@ -194,8 +194,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NAV] = LAYOUT_myr(
       KC_ESC , KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  ,          _______, _______,          KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10, KC_F11,
       _______, S(KC_NUHS), KC_LT, KC_LBRC, KC_RBRC, KC_GT ,          _______, _______,          KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_PSCR, KC_F12,
-      _______, KC_GRV , KC_UNDS, KC_LPRN, KC_RPRN, KC_AMPR,          _______, _______,          KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_ENT,  KC_INS,
-      _______, KC_NUBS, KC_AT  , KC_LCBR, KC_RCBR, S(KC_NUBS), _______, KC_SCRL, _______, _______,KC_PAUSE, KC_BSPC, KC_DEL,  KC_TAB,  XXXXXXX, XXXXXXX,
+      _______, KC_GRV , KC_MINS, KC_LPRN, KC_RPRN, KC_AMPR,          _______, _______,          KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_ENT,  KC_INS,
+      _______, KC_NUBS, KC_UNDS, KC_LCBR, KC_RCBR, S(KC_NUBS), _______, KC_SCRL, _______, _______,KC_PAUSE, KC_BSPC, KC_DEL,  KC_TAB,  XXXXXXX, XXXXXXX,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 
       _______, _______, _______, _______,          _______,                   _______, _______, _______, _______,          _______

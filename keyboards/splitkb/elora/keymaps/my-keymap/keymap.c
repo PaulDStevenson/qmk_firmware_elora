@@ -78,6 +78,7 @@ enum custom_keycodes {
     SW_APP,              // Cmd-Tab app swapper (macOS)
     SW_WIN_REV,          // Alt-Shift-Tab reverse swapper
     SW_APP_REV,          // Cmd-Shift-Tab reverse swapper
+    MAC_QUOT,            // Mac US: @ unshifted, ' shifted
 };
 
 static bool sw_win_active = false;
@@ -166,7 +167,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_M_BASE] = LAYOUT_myr(
       _______, _______, _______, _______, _______, _______,          _______, _______,          _______, _______, _______, _______, _______, _______,
       _______, _______, _______, _______, _______, _______,          _______, _______,          _______, _______, _______, _______, _______, _______,
-      _______, _______, _______, _______, _______, _______,          _______, _______,          _______, _______, _______, _______, _______, _______,
+      _______, _______, _______, _______, _______, _______,          _______, _______,          _______, _______, _______, _______, _______, MAC_QUOT,
       _______, _______, _______, _______, _______, _______, _______, _______, _______, TO(_G_BASE), _______, _______, _______, _______, _______, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 
@@ -234,7 +235,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_M_NUM] = LAYOUT_myr(
       _______, _______, _______, _______, _______, M_RELOAD,                              _______, _______,          _______, _______, _______, _______, _______, _______,
-      _______, LALT(KC_3), _______, SW_APP_REV, SW_APP, _______,                             _______, _______,          _______, _______, _______, _______, _______, _______,
+      _______, LALT(KC_3), KC_AT, SW_APP_REV, SW_APP, _______,                             _______, _______,          _______, _______, _______, _______, _______, _______,
       _______, OSM(MOD_LCTL), _______, OSM(MOD_LGUI), OSM(MOD_LSFT), _______,             _______, _______,          _______, _______, _______, _______, _______, _______,
       _______, M_UNDO, M_CUT, M_COPY, M_PASTE, M_REDO, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                                                       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
@@ -327,6 +328,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case SW_WIN_REV:
         case SW_APP_REV:
             return false; // fully handled by update_swapper
+        case MAC_QUOT:
+            if (record->event.pressed) {
+                uint8_t mods = get_mods() | get_oneshot_mods();
+                if (mods & MOD_MASK_SHIFT) {
+                    uint8_t saved_mods = get_mods();
+                    del_mods(MOD_MASK_SHIFT);
+                    del_oneshot_mods(MOD_MASK_SHIFT);
+                    tap_code(KC_QUOTE);
+                    set_mods(saved_mods);
+                } else {
+                    tap_code16(KC_AT);
+                }
+            }
+            return false;
     }
     return true;
 }

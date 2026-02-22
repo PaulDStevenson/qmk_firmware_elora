@@ -96,6 +96,10 @@ static bool sw_app_active = false;
 layer_state_t layer_state_set_user(layer_state_t state) {
   state = update_tri_layer_state(state, _NUM, _M_BASE, _M_NUM);
   state = update_tri_layer_state(state, _NAV, _M_BASE, _M_NAV);
+  // Cancel any active swappers when leaving the layer they live on
+  if (sw_win_active) { unregister_code(KC_LALT); sw_win_active = false; }
+  if (sw_app_active) { unregister_code(KC_LGUI); sw_app_active = false; }
+
  /* uint8_t current_layer = get_highest_layer(state); // Get the highest active layer
     switch (current_layer) { // Use the obtained layer
         case _G_BASE:

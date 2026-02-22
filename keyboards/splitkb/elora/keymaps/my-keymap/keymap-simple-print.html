@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elora Keymap — BASE / NAV / NUM</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 8mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: white;
+      color: black;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3mm;
+      margin-bottom: 4mm;
+    }
+
+    header h1 {
+      font-size: 13pt;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 8pt;
+      color: #555;
+      margin: 0;
+    }
+
+    .keymap-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .combos {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 3mm 4mm;
+      margin-top: 4mm;
+      font-size: 8pt;
+    }
+
+    .combos h2 {
+      font-size: 9pt;
+      margin: 0 0 2mm;
+      color: #333;
+    }
+
+    .combos table {
+      border-collapse: collapse;
+    }
+
+    .combos td {
+      padding: 0.5mm 4mm 0.5mm 0;
+    }
+
+    .combos td:first-child {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .notes {
+      margin-top: 3mm;
+      font-size: 7.5pt;
+      color: #444;
+      border-top: 1px solid #eee;
+      padding-top: 2mm;
+    }
+
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @media screen {
+      body {
+        padding: 10px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Elora Keymap — BASE &bull; NAV &bull; NUM</h1>
+    <p>splitkb/elora/rev1 &mdash; LAYOUT_myr &mdash; Windows</p>
+  </header>
+
+  <div class="keymap-container">
+    <img src="keymap-simple.svg" alt="Keymap diagram — BASE, NAV and NUM layers">
+  </div>
+
+  <div class="combos">
+    <h2>Combos</h2>
+    <table>
+      <tr><td>J + K</td><td>Backspace</td></tr>
+      <tr><td>K + L</td><td>Delete</td></tr>
+      <tr><td>R + F</td><td>Enter</td></tr>
+      <tr><td>E + D</td><td>Backspace</td></tr>
+    </table>
+  </div>
+
+  <div class="notes">
+    <strong>NUM layer:</strong> hold <kbd>NUM</kbd> (left thumb) &nbsp;&bull;&nbsp;
+    <strong>NAV layer:</strong> hold <kbd>NAV</kbd> (right thumb) &nbsp;&bull;&nbsp;
+    <strong>SW WIN:</strong> Alt+Tab window switcher (hold NUM, tap SW WIN to cycle)
+  </div>
+
+</body>
+</html>

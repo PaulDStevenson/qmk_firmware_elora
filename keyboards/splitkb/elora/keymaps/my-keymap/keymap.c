@@ -78,7 +78,7 @@ enum custom_keycodes {
     SW_APP,              // Cmd-Tab app swapper (macOS)
     SW_WIN_REV,          // Alt-Shift-Tab reverse swapper
     SW_APP_REV,          // Cmd-Shift-Tab reverse swapper
-    MAC_QUOT,            // Mac US: @ unshifted, ' shifted
+    MAC_QUOT,            // Mac US: ' unshifted, @ shifted
 };
 
 static bool sw_win_active = false;
@@ -349,10 +349,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     uint8_t saved_mods = get_mods();
                     del_mods(MOD_MASK_SHIFT);
                     del_oneshot_mods(MOD_MASK_SHIFT);
-                    tap_code(KC_QUOTE);
+                    tap_code16(KC_AT);
                     set_mods(saved_mods);
                 } else {
-                    tap_code16(KC_AT);
+                    tap_code(KC_QUOTE);
                 }
             }
             return false;

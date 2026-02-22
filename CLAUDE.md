@@ -17,9 +17,13 @@ or files references by these files
 
 ### 1. Parse the QMK keymap to YAML (if keymap.c changed)
 
+`keymap.yaml` is manually maintained with named layers. `elora.yaml` is auto-generated.
+Update `elora.yaml` to reflect the current layout, then manually sync any structural changes into `keymap.yaml`.
+
 ```sh
 cd keyboards/splitkb/elora/keymaps/my-keymap
-keymap parse -c draw-config-simple.yaml -q splitkb/elora/rev1 -l LAYOUT_myr -o keymap.yaml keymap.c
+qmk c2json -kb splitkb/elora/rev1 -km my-keymap -o /tmp/keymap_elora.json
+keymap -c draw-config-simple.yaml parse -q /tmp/keymap_elora.json -o elora.yaml
 ```
 
 ### 2. Generate the SVG with selected layers

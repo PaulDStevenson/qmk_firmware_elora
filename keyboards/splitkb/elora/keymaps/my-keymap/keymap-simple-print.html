@@ -21,65 +21,65 @@
       color: black;
     }
 
+    /* ── Each .page fills one A4 landscape sheet ── */
+    .page {
+      width: 281mm;   /* 297mm - 2×8mm margins */
+      height: 194mm;  /* 210mm - 2×8mm margins */
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      page-break-after: always;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+    }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       border-bottom: 1px solid #ccc;
-      padding-bottom: 3mm;
-      margin-bottom: 4mm;
+      padding-bottom: 2mm;
+      margin-bottom: 2mm;
+      flex-shrink: 0;
     }
 
     header h1 {
-      font-size: 13pt;
+      font-size: 11pt;
       margin: 0;
     }
 
     header p {
-      font-size: 8pt;
+      font-size: 7.5pt;
       color: #555;
       margin: 0;
     }
 
+    .keymap-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
     .keymap-container img {
-      width: 100%;
-      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
       display: block;
     }
 
-    .combos {
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 3mm 4mm;
-      margin-top: 4mm;
-      font-size: 8pt;
-    }
-
-    .combos h2 {
-      font-size: 9pt;
-      margin: 0 0 2mm;
-      color: #333;
-    }
-
-    .combos table {
-      border-collapse: collapse;
-    }
-
-    .combos td {
-      padding: 0.5mm 4mm 0.5mm 0;
-    }
-
-    .combos td:first-child {
-      font-weight: bold;
-      white-space: nowrap;
-    }
-
-    .notes {
-      margin-top: 3mm;
-      font-size: 7.5pt;
-      color: #444;
+    .footer {
+      flex-shrink: 0;
+      font-size: 7pt;
+      color: #555;
       border-top: 1px solid #eee;
-      padding-top: 2mm;
+      padding-top: 1.5mm;
+      margin-top: 2mm;
+      display: flex;
+      justify-content: space-between;
     }
 
     @media print {
@@ -91,38 +91,58 @@
 
     @media screen {
       body {
+        background: #888;
         padding: 10px;
-        max-width: 1200px;
-        margin: 0 auto;
+      }
+      .page {
+        background: white;
+        margin: 0 auto 20px;
+        padding: 8mm;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Elora Keymap — BASE &bull; NAV &bull; NUM</h1>
-    <p>splitkb/elora/rev1 &mdash; LAYOUT_myr &mdash; Windows</p>
-  </header>
-
-  <div class="keymap-container">
-    <img src="keymap-simple.svg" alt="Keymap diagram — BASE, NAV and NUM layers">
+  <!-- PAGE 1: BASE layer -->
+  <div class="page">
+    <header>
+      <h1>Elora — BASE Layer (Windows)</h1>
+      <p>splitkb/elora/rev1 &mdash; LAYOUT_myr</p>
+    </header>
+    <div class="keymap-container">
+      <img src="keymap-p1.svg" alt="BASE layer">
+    </div>
+    <div class="footer">
+      <span>
+        <strong>Combos:</strong>
+        J+K → Backspace &nbsp;&bull;&nbsp;
+        K+L → Delete &nbsp;&bull;&nbsp;
+        R+F → Enter &nbsp;&bull;&nbsp;
+        E+D → Backspace
+      </span>
+      <span>1 / 2</span>
+    </div>
   </div>
 
-  <div class="combos">
-    <h2>Combos</h2>
-    <table>
-      <tr><td>J + K</td><td>Backspace</td></tr>
-      <tr><td>K + L</td><td>Delete</td></tr>
-      <tr><td>R + F</td><td>Enter</td></tr>
-      <tr><td>E + D</td><td>Backspace</td></tr>
-    </table>
-  </div>
-
-  <div class="notes">
-    <strong>NUM layer:</strong> hold <kbd>NUM</kbd> (left thumb) &nbsp;&bull;&nbsp;
-    <strong>NAV layer:</strong> hold <kbd>NAV</kbd> (right thumb) &nbsp;&bull;&nbsp;
-    <strong>SW WIN:</strong> Alt+Tab window switcher (hold NUM, tap SW WIN to cycle)
+  <!-- PAGE 2: NAV + NUM layers -->
+  <div class="page">
+    <header>
+      <h1>Elora — NAV &amp; NUM Layers (Windows)</h1>
+      <p>splitkb/elora/rev1 &mdash; LAYOUT_myr</p>
+    </header>
+    <div class="keymap-container">
+      <img src="keymap-p2.svg" alt="NAV and NUM layers">
+    </div>
+    <div class="footer">
+      <span>
+        <strong>NAV:</strong> hold right thumb &nbsp;&bull;&nbsp;
+        <strong>NUM:</strong> hold left thumb &nbsp;&bull;&nbsp;
+        <strong>SW WIN:</strong> hold NUM + tap to cycle windows (Alt+Tab)
+      </span>
+      <span>2 / 2</span>
+    </div>
   </div>
 
 </body>

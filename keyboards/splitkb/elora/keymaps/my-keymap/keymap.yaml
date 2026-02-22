@@ -345,7 +345,7 @@ layers:
     - {t: ▽, type: trans}
     - F6
     - F7
-  - [F8, F9, F10, F11, '', '#', '@', '-', Alt+TAB, '=']
+  - [F8, F9, F10, F11, '', '#', '@', '-', SW WIN, '=']
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - '%'
@@ -420,10 +420,10 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+    - Alt+3
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - Gui+TAB
+    - SW APP
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}

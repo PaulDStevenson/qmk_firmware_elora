@@ -16,6 +16,7 @@
 
 
 #include QMK_KEYBOARD_H
+#include "swapper.h"
 
 // Audio support macros
 /*
@@ -72,8 +73,13 @@ enum layers {
 #define W_RELOAD KC_F5
 #define M_RELOAD LGUI(KC_R)
 
-#define W_SWAPPER LALT(KC_TAB)
-#define M_SWAPPER LGUI(KC_TAB)
+enum custom_keycodes {
+    SW_WIN = SAFE_RANGE, // Alt-Tab window swapper (Windows/Linux)
+    SW_APP,              // Cmd-Tab app swapper (macOS)
+};
+
+static bool sw_win_active = false;
+static bool sw_app_active = false;
 
 #define CTL_ESC  MT(MOD_LCTL, KC_ESC)
 #define CTL_QUOT MT(MOD_RCTL, KC_QUOTE)
@@ -207,7 +213,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_NUM] = LAYOUT_myr(
      KC_ESC  , XXXXXXX, XXXXXXX, PTAB, NTAB, W_RELOAD,                                    _______, _______,          KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10, KC_F11,
-     XXXXXXX , KC_HASH, KC_AT  ,KC_MINS , W_SWAPPER , KC_EQL ,                            _______, _______,          KC_PERC, KC_7   , KC_8  ,  KC_9 , KC_ASTR , XXXXXXX ,
+     XXXXXXX , KC_HASH, KC_AT  ,KC_MINS , SW_WIN , KC_EQL ,                            _______, _______,          KC_PERC, KC_7   , KC_8  ,  KC_9 , KC_ASTR , XXXXXXX ,
      XXXXXXX , OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), OSM(MOD_LSFT), KC_PLUS,       _______, _______,          KC_DOT , KC_0   , KC_1  , KC_2  , KC_3, XXXXXXX,
      XXXXXXX , W_UNDO,    W_CUT, W_COPY , W_PASTE, W_REDO , KC_LCBR,                      _______, _______,          KC_RCBR, XXXXXXX, KC_4   , KC_5  ,  KC_6 , KC_SLSH, XXXXXXX,
                                                       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
@@ -220,7 +226,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_M_NUM] = LAYOUT_myr(
       _______, _______, _______, _______, _______, M_RELOAD,                              _______, _______,          _______, _______, _______, _______, _______, _______,
-      _______, LALT(KC_3), _______, _______, M_SWAPPER, _______,                             _______, _______,          _______, _______, _______, _______, _______, _______,
+      _______, LALT(KC_3), _______, _______, SW_APP, _______,                             _______, _______,          _______, _______, _______, _______, _______, _______,
       _______, OSM(MOD_LCTL), _______, OSM(MOD_LGUI), OSM(MOD_LSFT), _______,             _______, _______,          _______, _______, _______, _______, _______, _______,
       _______, M_UNDO, M_CUT, M_COPY, M_PASTE, M_REDO, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                                                       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
@@ -302,6 +308,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    update_swapper(&sw_win_active, KC_LALT, KC_TAB, SW_WIN, keycode, record);
+    update_swapper(&sw_app_active, KC_LGUI, KC_TAB, SW_APP, keycode, record);
+
+    switch (keycode) {
+        case SW_WIN:
+        case SW_APP:
+            return false; // fully handled by update_swapper
+    }
+    return true;
+}
 
 /* The default OLED and rotary encoder code can be found at the bottom of qmk_firmware/keyboards/splitkb/elora/rev1/rev1.c
  * These default settings can be overriden by your own settings in your keymap.c

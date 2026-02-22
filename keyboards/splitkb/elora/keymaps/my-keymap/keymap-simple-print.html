@@ -21,18 +21,12 @@
       color: black;
     }
 
-    /* ── Each .page fills one A4 portrait sheet ── */
     .page {
-      width: 194mm;   /* 210mm - 2×8mm margins */
-      height: 281mm;  /* 297mm - 2×8mm margins */
+      width: 194mm;   /* 210mm - 2x8mm margins */
+      height: 281mm;  /* 297mm - 2x8mm margins */
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      page-break-after: always;
-    }
-
-    .page:last-child {
-      page-break-after: avoid;
     }
 
     header {
@@ -58,16 +52,12 @@
 
     .keymap-container {
       flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       overflow: hidden;
     }
 
     .keymap-container img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
+      width: 100%;
+      height: auto;
       display: block;
     }
 
@@ -78,6 +68,9 @@
       border-top: 1px solid #eee;
       padding-top: 1.5mm;
       margin-top: 2mm;
+    }
+
+    .footer .row {
       display: flex;
       justify-content: space-between;
     }
@@ -105,43 +98,31 @@
 </head>
 <body>
 
-  <!-- PAGE 1: BASE layer -->
   <div class="page">
     <header>
-      <h1>Elora — BASE Layer (Windows)</h1>
+      <h1>Elora — BASE / NAV / NUM (Windows)</h1>
       <p>splitkb/elora/rev1 &mdash; LAYOUT_myr</p>
     </header>
     <div class="keymap-container">
-      <img src="keymap-p1.svg" alt="BASE layer">
+      <img src="keymap-simple.svg" alt="BASE, NAV and NUM layers">
     </div>
     <div class="footer">
-      <span>
-        <strong>Combos:</strong>
-        J+K → Backspace &nbsp;&bull;&nbsp;
-        K+L → Delete &nbsp;&bull;&nbsp;
-        R+F → Enter &nbsp;&bull;&nbsp;
-        E+D → Backspace
-      </span>
-      <span>1 / 2</span>
-    </div>
-  </div>
-
-  <!-- PAGE 2: NAV + NUM layers -->
-  <div class="page">
-    <header>
-      <h1>Elora — NAV &amp; NUM Layers (Windows)</h1>
-      <p>splitkb/elora/rev1 &mdash; LAYOUT_myr</p>
-    </header>
-    <div class="keymap-container">
-      <img src="keymap-p2.svg" alt="NAV and NUM layers">
-    </div>
-    <div class="footer">
-      <span>
-        <strong>NAV:</strong> hold right thumb &nbsp;&bull;&nbsp;
-        <strong>NUM:</strong> hold left thumb &nbsp;&bull;&nbsp;
-        <strong>SW WIN:</strong> hold NUM + tap to cycle windows (Alt+Tab)
-      </span>
-      <span>2 / 2</span>
+      <div class="row">
+        <span>
+          <strong>Combos:</strong>
+          J+K &rarr; Backspace &nbsp;&bull;&nbsp;
+          K+L &rarr; Delete &nbsp;&bull;&nbsp;
+          R+F &rarr; Enter &nbsp;&bull;&nbsp;
+          E+D &rarr; Backspace
+        </span>
+      </div>
+      <div class="row">
+        <span>
+          <strong>NAV:</strong> hold right thumb &nbsp;&bull;&nbsp;
+          <strong>NUM:</strong> hold left thumb &nbsp;&bull;&nbsp;
+          <strong>SW WIN:</strong> hold NUM + tap to cycle windows (Alt+Tab)
+        </span>
+      </div>
     </div>
   </div>
 

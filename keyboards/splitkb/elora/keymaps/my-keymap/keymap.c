@@ -328,6 +328,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case SW_WIN_REV:
         case SW_APP_REV:
             return false; // fully handled by update_swapper
+        case KC_2:
+            // Mac US layout: remap Shift+2 from @ to " (matching UK layout)
+            if (layer_state_is(_M_BASE) && record->event.pressed) {
+                uint8_t mods = get_mods() | get_oneshot_mods();
+                if (mods & MOD_MASK_SHIFT) {
+                    uint8_t saved_mods = get_mods();
+                    del_mods(MOD_MASK_SHIFT);
+                    del_oneshot_mods(MOD_MASK_SHIFT);
+                    tap_code16(S(KC_QUOTE));
+                    set_mods(saved_mods);
+                    return false;
+                }
+            }
+            return true;
         case MAC_QUOT:
             if (record->event.pressed) {
                 uint8_t mods = get_mods() | get_oneshot_mods();

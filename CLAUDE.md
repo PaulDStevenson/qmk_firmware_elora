@@ -13,7 +13,8 @@
 config.h
 keymap.c
 rules.mk
-or files references by these files
+autocorrect_dictionary.txt
+or files referenced by these files
 
 ### 1. Parse the QMK keymap to YAML (if keymap.c changed)
 
@@ -36,6 +37,15 @@ keymap -c draw-config-simple.yaml draw -s BASE _NAV NUM -o keymap-simple.svg key
 - `-s BASE _NAV NUM` selects only those three layers
 - Layer names must match the keys in `keymap.yaml` (e.g. `_NAV` not `NAV`)
 - Add or remove layer names to change which layers appear
+
+### 3. Regenerate autocorrect data (if autocorrect_dictionary.txt changed)
+
+`autocorrect_dictionary.txt` contains typo → correction pairs. `autocorrect_data.h` is auto-generated from it.
+
+```sh
+cd keyboards/splitkb/elora/keymaps/my-keymap
+qmk generate-autocorrect-data autocorrect_dictionary.txt -kb splitkb/elora/rev1 -km my-keymap -o autocorrect_data.h
+```
 
 ## Build
 

@@ -8,7 +8,7 @@
 - `draw-config-simple.yaml` — config for keymap-draw (legend shrinking, modifier names, raw binding map)
 - `keymap-simple.svg` — generated SVG diagram (not tracked in git)
 - `keymap-simple-print.html` — printable HTML wrapper (tracked in git)
-- `autocorrect_dictionary.txt` contains typo → correction pairs. `autocorrect_data.h` is auto-generated from it.
+- `autocorrect_dictionary.txt`- contains typo → correction pairs. `autocorrect_data.h` is auto-generated from it. (not tracked in git)
 
 ## Common Commands
 
@@ -43,4 +43,5 @@ qmk compile -kb splitkb/elora/rev1 -km my-keymap
 If any file, or files referenced within a file, changes, perform the respective action. 
 - `autocorrect_dictionary.txt`: Regenerate Autocorrect Data & Compile Firmware
 - `rules.mk`, `config.h`, `keymap.c`: Commit, push to github & Compile.
+- `keymap.c`: Generate printable keymap
 

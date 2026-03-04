@@ -120,3 +120,7 @@ compile_commands.json
 via*.json
 /keyboards/**/keymaps/via/*
 /keyboards/**/keymaps/vial/*
+
+# Private autocorrect dictionaries
+autocorrect_dictionary.txt
+autocorrect_data.h

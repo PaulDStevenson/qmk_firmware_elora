@@ -1,0 +1,40 @@
+draw_config:
+  shrink_wide_legends: 4   # shrink labels longer than 4 chars to fit the box
+
+parse_config:
+  trans_legend:
+    t: ''
+    type: ghost              # transparent keys show no box at all
+
+  modifier_fn_map:
+    left_ctrl: Ctl
+    right_ctrl: Ctl
+    left_shift: Sft
+    right_shift: Sft
+    left_alt: Alt
+    right_alt: AltGr
+    left_gui: Gui
+    right_gui: Gui
+    keycode_combiner: '{mods}+{key}'
+    mod_combiner: '{mod_1}+{mod_2}'
+    special_combinations:
+      left_ctrl+left_alt+left_gui+left_shift: Hyper
+      left_ctrl+left_alt+left_shift: Meh
+
+  raw_binding_map:
+    Ctl+Sft+TAB: PTab
+    Ctl+TAB: NTab
+    Alt+TAB: ATab
+    Gui+TAB: GTab
+    Gui+R: Rld
+    Ctl+Z: Undo
+    Ctl+X: Cut
+    Ctl+C: Copy
+    Ctl+V: Paste
+    Ctl+Sft+Z: Redo
+    Gui+Z: Undo
+    Gui+X: Cut
+    Gui+C: Copy
+    Gui+V: Paste
+    Sft+Gui+Z: Redo
+    Alt+3: '#'

@@ -1,0 +1,871 @@
+layout: {qmk_keyboard: splitkb/elora/rev1, layout_name: LAYOUT_myr}
+layers:
+  L0:
+  - ESC
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - ''
+  - ''
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - ''
+  - ''
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '='
+  - LSFT
+  - A
+  - S
+  - D
+  - F
+  - G
+  - ''
+  - ''
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - LCTL
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - '['
+  - ''
+  - ''
+  - TO( M BASE)
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - CANCEL
+  - LALT
+  - LGUI
+  - MO( NUM)
+  - SPC
+  - ''
+  - ''
+  - {t: LSFT, h: sticky}
+  - MO( NAV)
+  - ''
+  - ''
+  - MPRV
+  - MNXT
+  - MPLY
+  - MSTP
+  - MUTE
+  - MPRV
+  - MNXT
+  - MPLY
+  - MSTP
+  - MUTE
+  L1:
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - MAC QUOT
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - TO( G BASE)
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  L2:
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - TO( BASE)
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - LCTL
+  - LSFT
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - ''
+  - ENT
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  L3:
+  - ESC
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - {type: ghost}
+  - {type: ghost}
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - {type: ghost}
+  - Sft+#
+  - <
+  - '['
+  - ']'
+  - '>'
+  - {type: ghost}
+  - {type: ghost}
+  - PGUP
+  - HOME
+  - UP
+  - END
+  - PSCR
+  - F12
+  - {type: ghost}
+  - '`'
+  - '-'
+  - (
+  - )
+  - '&'
+  - {type: ghost}
+  - {type: ghost}
+  - PGDN
+  - LEFT
+  - DOWN
+  - RGHT
+  - ENT
+  - INS
+  - {type: ghost}
+  - NUBS
+  - _
+  - '{'
+  - '}'
+  - Sft+NUBS
+  - {type: ghost}
+  - SCRL
+  - {type: ghost}
+  - {type: ghost}
+  - PAUSE
+  - BSPC
+  - DEL
+  - TAB
+  - ''
+  - ''
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  L4:
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - '~'
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - \
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - '|'
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  L5:
+  - ESC
+  - ''
+  - ''
+  - Ctl+Sft+TAB
+  - Ctl+TAB
+  - F5
+  - {type: ghost}
+  - {type: ghost}
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - ''
+  - '#'
+  - Sft+'
+  - SW WIN REV
+  - SW WIN
+  - '='
+  - {type: ghost}
+  - {type: ghost}
+  - '%'
+  - '7'
+  - '8'
+  - '9'
+  - '*'
+  - ''
+  - ''
+  - {t: LGUI, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: LCTL, h: sticky}
+  - {t: LSFT, h: sticky}
+  - +
+  - {type: ghost}
+  - {type: ghost}
+  - .
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - ''
+  - ''
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - Ctl+Sft+Z
+  - '{'
+  - {type: ghost}
+  - {type: ghost}
+  - '}'
+  - ''
+  - '4'
+  - '5'
+  - '6'
+  - /
+  - ''
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  L6:
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - Gui+R
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - Alt+3
+  - '@'
+  - SW APP REV
+  - SW APP
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {t: LCTL, h: sticky}
+  - {type: ghost}
+  - {t: LGUI, h: sticky}
+  - {t: LSFT, h: sticky}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - Gui+Z
+  - Gui+X
+  - Gui+C
+  - Gui+V
+  - Sft+Gui+Z
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  L7:
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - F9
+  - F10
+  - F11
+  - F12
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - F5
+  - F6
+  - F7
+  - F8
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - RSFT
+  - RCTL
+  - LALT
+  - RGUI
+  - {type: ghost}
+  - {type: ghost}
+  - F1
+  - F2
+  - F3
+  - F4
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  L8:
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  L9:
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - DF( BASE)
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - DF( M BASE)
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - RGB TOG
+  - RGB SAI
+  - RGB HUI
+  - RGB VAI
+  - RGB MOD
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - DF( G BASE)
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - RGB SAD
+  - RGB HUD
+  - RGB VAD
+  - RGB RMOD
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  L10:
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}
+  - {type: ghost}

@@ -43,5 +43,5 @@ qmk compile -kb splitkb/elora/rev1 -km my-keymap
 If any file, or files referenced within a file, changes, perform the respective action. 
 - `autocorrect_dictionary.txt`: Regenerate Autocorrect Data & Compile Firmware
 - `rules.mk`, `config.h`, `keymap.c`: Commit, push to github & Compile.
-- `keymap.c`: Generate printable keymap
+- `keymap.c`: Generate printable keymap, Commit, push to github & Compile.
 

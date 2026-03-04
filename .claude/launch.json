@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "keymap-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "keyboards/splitkb/elora/keymaps/my-keymap"],
+      "port": 8765
+    }
+  ]
+}
